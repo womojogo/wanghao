@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.4/axios.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <button>GET</button>
+        <button>POST</button>
+    </div>
+
+    <script>
+        const btns = document.querySelectorAll('button');
+        const dz = axios.create({
+            baseURL:'http://localhost:3000',
+            timeout:'2000'
+        })
+        dz({
+            url:'/comments',
+
+        }).then(res=>{
+            console.log(res);
+        })
+        
+        // btns[0].addEventListener('click',()=>{
+
+        // })
+        // btns[1].addEventListener('click',()=>{
+            
+        // })
+    </script>
+</body>
+
+</html>
